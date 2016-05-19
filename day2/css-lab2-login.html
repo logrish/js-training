@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+	<style type="text/css">
+		header{
+			border-bottom: solid;
+			height: 20%;
+			background-color: blue;
+			border-width: 1px;
+		}
+		#loginBorderBox{
+			border:solid;
+			border-width: 1px;
+			border-color: blue;
+			text-align: center;
+		}
+		.inputBox{
+			margin: 10px;			
+			align-items: center;
+			text-align: center;
+			margin: auto;
+		}
+	</style>
+	<script type="text/javascript">
+		function loginButtonClicked(){
+			var username = document.getelementById("usernameInputBox").value;
+			var password = document.getelementById("passwordInputBox").value;
+			if (username=="admin"&&password=="admin") {
+
+			}
+
+		}
+	</script>
+</head>
+<body>
+	<header>
+		<img src="https://lh6.googleusercontent.com/-NVMqzguqe6Y/AAAAAAAAAAI/AAAAAAAAC5A/uTjryEmvrjg/s0-c-k-no-ns/photo.jpg">
+	</header>
+	<div align="center" id="loginBorderBox" >
+		<div class="inputBox" >
+			<input type="text" placeholder="Username" id="usernameInputBox">
+		</div>
+		<div class="inputBox" >
+			<input type="password" placeholder="Password" id="passwordInputBox">
+		</div><div class="inputBox" >
+		<button type="button" id="loginButton">Login</button>
+	</div>
+</div>
+</body>
+</html>
