@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Movie adding</title>
+    <script type="text/javascript" src="lab02.js"></script>
+</head>
+
+<body>
+    <input id="movieNameTextBox" type="text" name="inputBox" placeholder="Movie">
+    </br>
+    <input id="movieYearTextBox" type="number" name="inputBox" placeholder="Year of the movie">
+    </br>
+    <button id="addMovieButton" type="button" onclick="addMovieButtonClicked()">Add Movie</button>
+    </br>
+    <a onclick="listAllMovies()" href="" id="movieListLink">List all the movies</a>
+    <div id="moviesTableContainer">
+        <table id="moviesTable" style="display:none" >
+            <tr>
+    <td>Movie Name</td>
+    <td>Movie year</td>
+  </tr>
+        </table>
+    </div>
+</body>
+
+</html>
