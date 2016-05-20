@@ -1,0 +1,141 @@
+<!--
+Create a page Lab03.html
+Create a <table> of prog. languages
+with Name and Version columns;
+
+—(Odd number row, text should be in blue color)
+—(even number row, text should be in green color)
+—(On mouseover the table header’s background color should become black; and text should become ‘white’) (Use background-color)
+—Highlight the empty version number columns with gray background color; Use :empty pseudo selector
+—Change the color  of first letter every language to Green. Use :first-letter pseudo selector
+-Create a Name and Version text boxes with class as “language”. Whenever you bring the text box to focus change the background color to yellow. Use :focus pseudo selector
+
+Java 8
+C# 5
+Scala 3
+Groovy 3
+F# 5
+JavaScript 2
+Objective-C 2
+Python
+Lisp
+VB.NET
+Ruby -->
+
+<html>
+
+<head>
+    <style>
+        table {
+            border: solid;
+            border-width: 1px;
+        }
+        
+        th {
+            border: solid;
+            border-width: 1px;
+        }
+        
+        td {
+            border: solid;
+            border-width: 1px;
+            border-color: aquamarine;
+        }
+        
+        .version {
+            text-align: center;
+        }
+        
+        .tableContentRow:nth-child(odd) {
+            color: blue;
+            border: solid;
+        }
+        
+        .tableContentRow:nth-child(even) {
+            color: green;
+            border: solid;
+        }
+        
+        td:empty {
+            background-color: gray;
+        }
+        
+        .tableHeaderRow: hover {
+            color: white;
+            background-color: black;
+        }
+        
+        .languageName:first-letter {
+            color: red;
+        }
+        
+        .language1:focus {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <input class="language1" type="text" placeholder="Name">
+        </br>
+        <input class="language1" type="number" placeholder="Version">
+        </br>
+        </br>
+
+    </div>
+    <div>
+        <table>
+            <tr class="tableHeaderRow">
+                <th> Language</th>
+                <th> Version </th>
+            </tr>
+            <tr class="tableContentRow">
+                <td class="languageName"> Java</td>
+                <td class="version"> 8</td>
+            </tr>
+            <tr class="tableContentRow">
+                <td class="languageName"> C # </td>
+                <td class="version">5</td>
+            </tr>
+            <tr class="tableContentRow">
+                <td class="languageName"> Scala</td>
+                <td class="version"> 3</td>
+            </tr>
+            <tr class="tableContentRow">
+                <td class="languageName"> Groovy</td>
+                <td class="version"> 3</td>
+            </tr>
+            <tr class="tableContentRow">
+                <td class="languageName"> F #</td>
+                <td class="version"> 5</td>
+            </tr>
+            <tr class="tableContentRow">
+                <td class="languageName"> JavaScript</td>
+                <td class="version"> 2</td>
+            </tr>
+            <tr class="tableContentRow">
+                <td class="languageName"> Objective-C</td>
+                <td class="version"> 2</td>
+            </tr>
+            <tr class="tableContentRow">
+                <td class="languageName"> Python</td>
+                <td class="version"></td>
+            </tr>
+            <tr class="tableContentRow">
+                <td class="languageName"> Lisp</td>
+                <td class="version"></td>
+            </tr>
+            <tr class="tableContentRow">
+                <td class="languageName"> VB.NET</td>
+                <td class="version"></td>
+            </tr>
+            <tr class="tableContentRow">
+                <td class="languageName"> Ruby</td>
+                <td class="version"></td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
