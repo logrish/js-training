@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <script src="jquery-2.2.4.js"></script>
+
+    <script>
+        $().ready(init);
+
+
+        function init() {
+            $("#disableFields").on("click", disableFields);
+            $("#set1").focus();
+            $(".ipinput").on("keyup", ipchanged);
+        }
+
+        function ipchanged() {
+            console.log("ipchanged", $(this).val().length);
+            if ($(this).val().length == 3) {
+                if ($(this).attr("id") == "set4") {
+                    $("#disableFields").focus();
+                } else {
+                    console.log("ipchanged", $(this).val().length,$(this.next().attr("id")));
+                    $((this).next().focus());
+                }
+            }
+        }
+
+        function disableFields() {
+            //            disable fields
+            $(".ipinput").prop("disabled", true);
+
+        }
+    </script>
+
+</head>
+
+<body>
+    <p class="outerBox">
+        <label id="headerForPage">Ip Address</label>
+        <input type="text" class="ipinput" id="set1" maxlength="3">
+        <label class="dots">.</label>
+        <input type="text" class="ipinput" id="set2" maxlength="3">
+        <label class="dots">.</label>
+        <input type="text" class="ipinput" id="set3" maxlength="3">
+        <label class="dots">.</label>
+        <input type="text" class="ipinput" id="set4" maxlength="3">
+
+    </p>
+    </br>
+
+    <button type="button" id="disableFields">Ok</button>
+</body>
+
+</html>`
