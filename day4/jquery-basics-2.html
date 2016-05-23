@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <script src="jquery-2.2.4.js"></script>
+    <script>
+        $().ready(init);
+
+        function init() {
+            $("#clickbutton").on("click", doSomething);
+            $("#firstName").on("focus", doSomethingElse);
+            $("#firstName").on("blut", doSomethingElseFurther);
+        }
+
+        function doSomethingElseFurther() {
+            $("#firstName").css("background-color", "green");
+        }
+
+        function doSomethingElse() {
+            $("#firstName").css("background-color", "red");
+        }
+
+        function doSomething() {
+            var firstName = $("#firstName").val();
+            var lastname = $("#lastName").val();
+            $("#message").text("Hi " + firstName);
+            $("#message").css("color", "red");
+            $("#firstName").hide();
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" id="firstName" placeholder="FirstName">
+    </br>
+    <input type="text" id="lastName" placeholder="LastName">
+    </br>
+    <button type="button">Check Me!</button>
+    <h1 id="message"></h1>
+</body>
+
+</html>

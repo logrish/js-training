@@ -1,0 +1,96 @@
+<html>
+
+<head>
+    <script src="jquery-2.2.4.js"></script>
+
+    <script>
+        $().ready(init);
+
+
+        function init() {
+            $("#disableFields").on("click", disableFields);
+            $("#set1").focus();
+
+            //            function moveOnMax(field, nextFieldID) {
+            //                if (field.value.length >= field.maxLength) {
+            //                    nextFieldID.focus();
+            //                }
+            //            }
+            $("#set1").keyup(function () {
+                console.log("keyup");
+                if (this.value.length == 3) {
+                    $("#set2").focus();
+                }
+            });
+            $("#set2").keyup(function () {
+                console.log("keyup");
+                if (this.value.length == 3) {
+                    $("#set3").focus();
+                }
+            });
+            $("#set3").keyup(function () {
+                console.log("keyup");
+                if (this.value.length == 3) {
+                    $("#set4").focus();
+                }
+            });
+            $("#set4").keyup(function () {
+                console.log("keyup");
+                if (this.value.length == 3) {
+                    $("#disableFields").focus();
+                }
+            });
+        }
+
+
+        function disableFields() {
+            //            disable fields
+            $(".ipinput").prop("disabled", true);
+
+        }
+    </script>
+    <style>
+        label {
+            align-content: center;
+            float: left;
+        }
+        
+        .outerBox {
+            float: left;
+            height: auto;
+            color: aqua;
+            padding: 5%;
+        }
+        
+        .ipinput {
+            float: left;
+            text-align: center;
+            width: 50px;
+        }
+        
+        .dots {
+            float: left;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="outerBox">
+        <label id="headerForPage">Ip Address</label>
+        <input type="text" class="ipinput" id="set1" maxlength="3">
+        <label class="dots">.</label>
+        <input type="text" class="ipinput" id="set2" maxlength="3">
+        <label class="dots">.</label>
+        <input type="text" class="ipinput" id="set3" maxlength="3">
+        <label class="dots">.</label>
+        <input type="text" class="ipinput" id="set4" maxlength="3">
+
+    </p>
+    </br>
+
+    <button type="button" id="disableFields">Ok</button>
+</body>
+
+</html>`

@@ -1,0 +1,80 @@
+<html>
+
+<head>
+    <style>
+        .innerBox {
+            font-size: 20px;
+            float: left;
+            border: solid;
+            width: 20%;
+            height: 20%;
+            padding: 5%;
+            border-color: magenta;
+            margin: 1% 1% 1% 1%;
+            transition: 3s;
+            text-align: center;
+        }
+        
+        #xBox:hover {
+            width: 30%;
+            transform: scale(1.5);
+        }
+        /*
+        #yBox {
+            font-size: 20px;
+            position: relative;
+            border: solid;
+            width: 30%;
+            height: 30%;
+            border-color: magenta;
+            margin: 3% 10% 10% 3%;
+        }
+*/
+        
+        #yBox:hover {
+            -webkit-transition: 5s;
+            -webkit-transform: rotateY(360deg);
+        }
+        /*
+        #zBox {
+            font-size: 20px;
+            position: relative;
+            border: solid;
+            width: 30%;
+            height: 30%;
+            border-color: magenta;
+            margin: 3% 10% 10% 3%;
+        }
+        
+*/
+        
+        #zBox:hover {
+            -webkit-transition: 5s;
+            -webkit-transform: rotateZ(45deg);
+        }
+        
+        .outerBox {
+            border: solid;
+            width: 80%;
+            height: 80%;
+            border-color: black;
+            margin: 10% 10% 10% 10%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outerBox">
+        <div class="innerBox" id="xBox">
+            <p>X</p>
+        </div>
+        <div class="innerBox" id="yBox">
+            <p>Y</p>
+        </div>
+        <div class="innerBox" id="zBox">
+            <p>Z</p>
+        </div>
+    </div>
+</body>
+
+</html>

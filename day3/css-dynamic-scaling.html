@@ -1,0 +1,21 @@
+<html>
+
+<head>
+    <script>
+        function sliderValueChanged(){
+            var sliderValue = document.getElementById("fontSlider").value;
+            var textComponent = document.getElementById("textToBeModified");
+            textComponent.style.fontSize = sliderValue;
+            textComponent.style.webkitTransform = "rotateY("+sliderValue+"deg)"
+            textComponent.style.webkitTransform = "rotateX("+sliderValue+"deg)"
+            console.log(sliderValue);
+        }
+    </script>
+</head>
+
+<body>
+    <input id="fontSlider" type="range" min="10" max="360" value="10" oninput="sliderValueChanged()">
+    <p id="textToBeModified">This is the sample text to be modified</p>
+</body>
+
+</html>

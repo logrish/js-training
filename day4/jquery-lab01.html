@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <script src="jquery-2.2.4.js"></script>
+
+    <script>
+        $().ready(init);
+
+        function init() {
+            $("#setValues").on("click", setTheNewvalues);
+        }
+
+
+
+        function setTheNewvalues() {
+            var fontFamily = $("#fontFamily").val();
+            var fontColor = $("#fontColor").val();
+            var borderWidth = $("#borderWidth").val();
+            $(".outerBox").css("border-width", borderWidth);
+            $("#headerForPage").css("font-family", fontFamily);
+            $("#headerForPage").css("color", $("#fontColor").val());
+
+        }
+    </script>
+    <style>
+        .outerBox {
+            width: 80%;
+            height: auto;
+            border: solid;
+            border-color: black;
+            border-width: 2px
+            font-family:cursive;
+            color: aqua;
+            padding: 5%;
+                
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outerBox">
+        <h2 id="headerForPage">jQuery Exercise - I</h2> </br>
+        <input type="text" id="fontFamily" placeholder="FontFamily">
+        </br>
+        <input type="text" id="fontColor" placeholder="Font color">
+        </br>
+        <input type="number" id="borderWidth" placeholder="Border Width">
+        </br>
+        <button type="button" id="setValues">Set</button>
+
+    </div>
+</body>
+
+</html>
